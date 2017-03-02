@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<FlowPane columnHalignment="CENTER" maxHeight="321.0" maxWidth="260.0" minHeight="265.0" minWidth="260.0" prefHeight="284.0" prefWidth="260.0" rowValignment="TOP" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.DuelController">
+   <children>
+      <VBox prefHeight="55.0" prefWidth="100.0">
+         <FlowPane.margin>
+            <Insets left="25.0" right="5.0" top="25.0" />
+         </FlowPane.margin>
+         <children>
+            <TextField fx:id="p1" alignment="CENTER" promptText="Your Username" />
+            <TextField fx:id="p2" alignment="CENTER" promptText="Opponent ">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin></TextField>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" fillWidth="true" minWidth="100.0" prefHeight="55.0" prefWidth="100.0">
+         <FlowPane.margin>
+            <Insets left="5.0" right="25.0" top="25.0" />
+         </FlowPane.margin>
+         <children>
+            <MenuButton fx:id="p1Style" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Attack Style" textAlignment="CENTER">
+              <items>
+                <MenuItem fx:id="p1Accurate" mnemonicParsing="false" text="1. Accurate" />
+                <MenuItem fx:id="p1Aggressive" mnemonicParsing="false" text="2. Aggressive" />
+                  <MenuItem fx:id="p1Controlled" mnemonicParsing="false" text="3. Controlled" />
+                  <MenuItem fx:id="p1Defensive" mnemonicParsing="false" text="4. Defensive" />
+                  <MenuItem fx:id="p1RotateAD" mnemonicParsing="false" text="5. Rotate (1/4)" />
+                  <MenuItem fx:id="p1RotateCD" mnemonicParsing="false" text="6. Rotate (3/4)" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="p2Style" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Attack Style" textAlignment="CENTER" VBox.vgrow="NEVER">
+              <items>
+                <MenuItem fx:id="p2Accurate" mnemonicParsing="false" text="1. Accurate" />
+                <MenuItem fx:id="p2Aggressive" mnemonicParsing="false" text="2. Aggressive" />
+                  <MenuItem fx:id="p2Controlled" mnemonicParsing="false" text="3. Controlled" />
+                  <MenuItem fx:id="p2Defensive" mnemonicParsing="false" text="4. Defensive" />
+                  <MenuItem fx:id="p2RotateAD" mnemonicParsing="false" text="5. Rotate (1/4)" />
+                  <MenuItem fx:id="p2RotateCD" mnemonicParsing="false" text="6. Rotate (3/4)" />
+              </items>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </MenuButton>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="210.0">
+         <FlowPane.margin>
+            <Insets left="25.0" top="15.0" />
+         </FlowPane.margin>
+         <children>
+            <MenuButton fx:id="duelType" mnemonicParsing="false" prefHeight="25.0" prefWidth="221.0" text="Duel Type" textAlignment="CENTER" VBox.vgrow="NEVER">
+              <items>
+                <MenuItem fx:id="tentSpecOff" mnemonicParsing="false" text="1. Tentacle - Spec Disabled" />
+                <MenuItem fx:id="tentSpecOn" mnemonicParsing="false" text="2. Tentacle - Spec Enabled (DDS)" />
+                  <MenuItem fx:id="dScimSpecOff" mnemonicParsing="false" text="3. D Scim - Spec Disabled" />
+                  <MenuItem fx:id="dScimSpecOn" mnemonicParsing="false" text="4. D Scim - Spec Enabled (DDS)" />
+                  <MenuItem fx:id="noWeapon" mnemonicParsing="false" text="5. No Weapons" />
+              </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <Pane prefHeight="146.0" prefWidth="260.0">
+         <children>
+            <TextArea fx:id="textArea" layoutX="24.0" layoutY="2.0" prefHeight="91.0" prefWidth="167.0" />
+            <Button fx:id="runButton" layoutX="198.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Run" />
+            <Button fx:id="clearButton" layoutX="198.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Clear" />
+            <Button fx:id="exitButton" layoutX="198.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Exit" />
+         </children>
+         <FlowPane.margin>
+            <Insets bottom="15.0" top="15.0" />
+         </FlowPane.margin>
+      </Pane>
+   </children>
+</FlowPane>
